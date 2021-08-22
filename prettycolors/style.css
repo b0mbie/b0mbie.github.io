@@ -1,0 +1,22 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+}
