@@ -21,8 +21,19 @@ function generateToText()
 	document.getElementById("skobkas").textContent = generateSkobkas((happiness == 1) ? presetTypes.happy : presetTypes.sad, genLength);
 }
 
+function selectSkobkas(event)
+{
+	var el = event.target;
+	var range = document.createRange();
+	range.selectNodeContents(el);
+	var sel = window.getSelection();
+	sel.removeAllRanges();
+	sel.addRange(range);
+}
+
 window.onload = function ()
 {
 	document.getElementById("happiness").onchange = onHappinessChange;
 	document.getElementById("genButton").onclick = generateToText;
+	document.getElementById("skobkas").onclick = selectSkobkas;
 };
