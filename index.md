@@ -11,3 +11,5 @@ but here's some links to stuff i made
 ## [infinite fiddler crab](./fiddler/)
 ## [HOW IS THIS MAN](./impact/)
 ## [discord pfp creator](./discordpfp/)
+## [pretty colors](./prettycolors/)
+## [skobka maker](./skobkas/)
