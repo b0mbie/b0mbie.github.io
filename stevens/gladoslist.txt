@@ -1,0 +1,9 @@
+# this is to combine GLaDOS' speech with
+# ffmpeg -f concat -safe 0 -i gladoslist.txt -c copy glados_intro.wav
+file '00_part1_entry-1.wav'
+file '00_part1_entry-2.wav'
+file '00_part1_entry-3.wav'
+file '00_part1_entry-4.wav'
+file '00_part1_entry-5.wav'
+file '00_part1_entry-6.wav'
+file '00_part1_entry-7.wav'
