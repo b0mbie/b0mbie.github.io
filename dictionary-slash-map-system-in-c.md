@@ -3,7 +3,7 @@
 1. [Inspiration](#inspiration)
     - [JavaScript](#javascript)
     - [Lua](#lua)
-    - [C#](#c#)
+    - [C#](#c)
 2. [General Idea](#general-idea)
 3. [Implementation in C](#implementation-in-c)
     - [The KeyValue Struct](#the-keyvalue-struct)
