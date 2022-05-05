@@ -126,7 +126,7 @@ function createCitizen()
 	nCitizen.appendChild(nCitizen.img);
 
 	// boowomp sound & state
-	nCitizen.boowomp = createAudio("./sound/boowomp.ogg", nCitizen);
+	nCitizen.boowomp = createAudio("./sound/boowomp.wav", nCitizen);
 	nCitizen.boowomp.onplay = function (e)
 	{
 		e.target.parentElement.img.src = "./citizen_on.png";
