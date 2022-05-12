@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'LimerickCdSerial-Xbold';
+    src: local('LimerickCdSerial-Xbold-Regular'), local('LimerickCdSerialXbold'),
+        url('fonts/LimerickCdSerialXbold.woff2') format('woff2'),
+        url('fonts/LimerickCdSerialXbold.woff') format('woff'),
+        url('fonts/LimerickCdSerialXbold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
