@@ -26,12 +26,17 @@ textwrap = {
     simple: function simple(what, lineLength)
     {
         let lines = [];
-        for (let i = 0; i < what.length; i += lineLength)
+        let lines2 = what.split('\n');
+        for (let k = 0; k < lines2.length; k++)
         {
-            let lines2 = what.substring(i, i + lineLength).split('\n');
-            for (let j = 0; j < lines2.length; j++)
+            let line = lines2[k];
+            for (let i = 0; i < line.length; i += lineLength)
             {
-                lines.push(lines2[j]);
+                let lines3 = line.substring(i, i + lineLength).split('\n');
+                for (let j = 0; j < lines3.length; j++)
+                {
+                    lines.push(lines3[j]);
+                }
             }
         }
         return lines;

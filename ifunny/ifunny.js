@@ -6,15 +6,13 @@ let text = "me when the",
     textSize = 32, // this is a placeholder, must change when an image is loaded
     lineSpacing = 8,
     margin = 8, // also a placeholder
-    sizeMult = 0.15;
+    sizeMult = 0.1;
 
 function loadImage(event)
 {
     mImage.src = URL.createObjectURL(event.target.files[0]);
     mImage.onload = updateParams;
 }
-
-let max = Math.max;
 
 function getLines(text, size)
 {
@@ -26,8 +24,9 @@ function initCanvas(img)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     let txt = getLines(text, textSize);
-    let headerSize = textSize + textSize * txt.length + max(0, lineSpacing * (txt.length - 1));
+    let headerSize = textSize + textSize * txt.length + Math.max(0, lineSpacing * (txt.length - 1));
 
+    mImage.hypotenuse = Math.sqrt(img.width * img.width + img.height * img.height);
     canvas.width = img.width;
     canvas.height = img.height + headerSize;
     ctx.drawImage(img, 0, headerSize);
@@ -54,7 +53,7 @@ function drawCaption(text, size, x, y)
     // fill text
     for (let i = 0; i < txt.length; i++)
     {
-        ctx.fillText(txt[i], x, y + size * i + max(0, lineSpacing * i));
+        ctx.fillText(txt[i], x, y + size * i + Math.max(0, lineSpacing * i));
     }
     
     ctx.restore();
@@ -62,7 +61,7 @@ function drawCaption(text, size, x, y)
 
 function updateImage()
 {
-    textSize = mImage.height * sizeMult;
+    textSize = mImage.hypotenuse * sizeMult;
     margin = mImage.width * 0.005;
     initCanvas(mImage);
     drawCaption(text, textSize, canvas.width * 0.5, textSize * 1.25);
