@@ -148,6 +148,39 @@ function createCitizen()
 /// Update rate.
 let rate = 50;
 
+/// Update tick ID.
+let citizenTickID = 0;
+
+/// Update the state of the page.
+function citizenTick()
+{
+	if (hellPlaying)
+	{
+		let dt = 1/rate;
+
+		for (let i = 0; i < createdCitizens.length; i++)
+		{
+			let citizen = createdCitizens[i];
+
+			// stop current boowomp
+			stop(citizen.boowomp);
+
+			// offset citizen next boowomp
+			citizen.nextBoowomp += dt;
+		}
+		return;
+	}
+
+	for (let i = 0; i < createdCitizens.length; i++)
+	{
+		let citizen = createdCitizens[i];
+		if (citizen.nextBoowomp <= time())
+		{
+			playBoowomp(citizen);
+		}
+	}
+}
+
 /// Initialize everything.
 function init()
 {
@@ -160,32 +193,5 @@ function init()
 	// append join audio element
 	document.body.appendChild(join);
 
-	setInterval(function ()
-	{
-		if (hellPlaying)
-		{
-			let dt = 1/rate;
-
-			for (let i = 0; i < createdCitizens.length; i++)
-			{
-				let citizen = createdCitizens[i];
-
-				// stop current boowomp
-				stop(citizen.boowomp);
-
-				// offset citizen next boowomp
-				citizen.nextBoowomp += dt;
-			}
-			return;
-		}
-
-		for (let i = 0; i < createdCitizens.length; i++)
-		{
-			let citizen = createdCitizens[i];
-			if (citizen.nextBoowomp <= time())
-			{
-				playBoowomp(citizen);
-			}
-		}
-	}, 1000/rate);
+	citizenTickID = setInterval(citizenTick, 1000/rate);
 }
