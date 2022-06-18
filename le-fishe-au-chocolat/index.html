@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <title>Le Fishe au chocolat</title>
+    <link rel="stylesheet" href="../common/style.css">
     <meta property="og:title" content="New Jersey" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://akabomb-prog.github.io/le-fishe-au-chocolat/" />
@@ -8,8 +10,43 @@
     <meta property="og:description" content="Le Fishe au chocolat" />
     <meta name="theme-color" content="#42261B">
     <link rel="stylesheet" href="style.css">
+    <style>
+        a {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+        }
+        a:hover {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline;
+        }
+        div {
+            width: 60%;
+            height: 80%;
+        }
+        #fishe {
+            position: relative;
+            width: 100%;
+            height: 69.3%;
+            bottom: 0;
+        }
+        #caption {
+            font-family:'VI My Ha';
+            font-size: 800%;
+            letter-spacing: 2px;
+            display: inline-block;
+            transform: scaleX(1);
+            transform-origin: 0 0;
+            white-space: nowrap;
+        }
+    </style>
+    <script src="./textstretch.js"></script>
 </head>
-<body>
-    <p style="font-family: 'VI My Ha';font-size: 800%;">Le Fishe au chocolat</p>
+<body onload="init();" onresize="stretchText();">
+    <div class="centered">
+        <i><span id="caption">Le Fishe au chocolat</span></i>
+        <img src="fishe.png" id="fishe" class="nonselectable">
+    </div>
 </body>
 </html>
