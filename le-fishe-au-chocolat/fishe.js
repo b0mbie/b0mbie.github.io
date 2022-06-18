@@ -62,7 +62,8 @@ function start()
             videoId: audioID,
             playerVars: {
                 autoplay: '0',
-                loop: '1'
+                loop: '1',
+                playlist: audioID
             },
             events: {
                 'onReady': function (e)
@@ -92,7 +93,8 @@ function onYouTubeIframeAPIReady()
         videoId: audioID,
         playerVars: {
             autoplay: '0',
-            loop: '1'
+            loop: '1',
+            playlist: audioID
         },
         events: {
             'onReady': function (e)
