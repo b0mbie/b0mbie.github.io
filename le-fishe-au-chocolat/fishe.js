@@ -73,6 +73,12 @@ function start()
     }
 }
 
+function changeCaptionText(text)
+{
+    caption.textContent = text;
+    setTimeout(stretchText, 10);
+}
+
 function onYouTubeIframeAPIReady()
 {
     let div = document.createElement("div");
