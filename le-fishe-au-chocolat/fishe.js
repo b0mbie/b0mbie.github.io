@@ -45,6 +45,7 @@ function stretchText()
 function playMusic()
 {
     player.playVideo();
+    player.setLoop(true);
 }
 
 /// Play intro, then music.
