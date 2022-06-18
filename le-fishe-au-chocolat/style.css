@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'VI My Ha';
+    src: url('fonts/VI-MyHa.woff2') format('woff2'),
+        url('fonts/VI-MyHa.woff') format('woff'),
+        url('fonts/VI-MyHa.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
