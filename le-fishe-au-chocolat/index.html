@@ -21,34 +21,44 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             text-decoration: underline;
         }
-        div {
-            width: 60%;
-            height: 80%;
+        #ctn {
+            width: 640px;
+            height: 360px;
         }
         #fishe {
-            position: relative;
+            position: absolute;
+            top: 85%; left: 50%;
+
             width: 100%;
-            height: 69.3%;
-            bottom: 0;
+            object-fit: contain;
+
+            border-radius: 16px;
+            
+            transform: translate(-50%, -100%);
         }
         #caption {
+            position: relative;
+            top: -30%; left: 50%;
+
             font-family:'VI My Ha';
-            font-size: 800%;
+            font-size: 86px;
             letter-spacing: 2px;
-            display: inline-block;
-            transform: scaleX(1);
-            transform-origin: 0 0;
             white-space: nowrap;
+
+            display: inline-block;
+
+            transform-origin: 50% 0;
+            transform: translate(-50%, 0) scaleX(1);
         }
     </style>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./fishe.js"></script>
 </head>
 <body onload="init();" onresize="stretchText();">
-    <div class="centered">
-        <i><span id="caption">Le Fishe au chocolat</span></i>
+    <div id="ctn" class="centered">
+        <i><p id="caption">Le Fishe au chocolat</p></i>
         <img src="fishe.png" id="fishe" class="nonselectable">
     </div>
-    <a id="startbtn" class="centered" style="font-size: 72px;text-align: center;" href="#">i like fish</a>
+    <a id="startbtn" class="centered" style="font-size:72px;text-align:center;white-space:nowrap;" href="#">le click for le funny</a>
 </body>
 </html>

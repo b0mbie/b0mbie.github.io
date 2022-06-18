@@ -37,7 +37,7 @@ function stretchText()
     let fwidth = fishe.getBoundingClientRect().width;
     let factor = fwidth / cwidth;
     if (factor < 1.02 && factor > 0.98) return;
-    caption.style.transform = "scaleX(" + factor + ')';
+    caption.style.transform = "translate(-50%, 0) scaleX(" + factor + ')';
     caption.scaleFactor = factor;
 }
 
@@ -52,6 +52,25 @@ function start()
 {
     intro.play();
     intro.addEventListener("ended", playMusic);
+
+    if (!player)
+    {
+        player = new YT.Player("youtube-player", {
+            height: '0',
+            width: '0',
+            videoId: audioID,
+            playerVars: {
+                autoplay: '0',
+                loop: '1'
+            },
+            events: {
+                'onReady': function (e)
+                {
+                    console.log("YouTube player ready\nLet's go out\nto have some\nfish for dinner");
+                }
+            }
+        });
+    }
 }
 
 function onYouTubeIframeAPIReady()
