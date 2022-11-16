@@ -88,7 +88,7 @@ function draw()
 {
     background("#414141");
     
-    oter.rotation -= deltaTime * 0.1;
+    oter.rotation += deltaTime * 0.1;
     
     angleMode(DEGREES);
     push();
@@ -97,7 +97,7 @@ function draw()
         translate(0, 0, -4);
         rotateX(oter.rotation);
         rotateY(oter.rotation);
-        rotateZ(oter.rotation);
+        rotateZ(-oter.rotation);
         noStroke();
         model(oter.model);
     pop();
