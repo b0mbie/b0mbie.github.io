@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            background-image: url("./nik.gif");
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <script src="./loop.js"></script>
+    <script>
+        const bgm = new LoopedAudio("./unlivereaction.mp3", 0.5);
+
+        async function AutoPlay(e) {
+            await actx.resume();
+            bgm.play();
+            window.removeEventListener("click", AutoPlay);
+        }
+
+        window.addEventListener(
+            "click",
+            AutoPlay
+        );
+    </script>
+</body>
+</html>
