@@ -9,6 +9,9 @@
     <meta property="og:image:type" content="image/gif">
     <meta property="og:image:width" content="640">
     <meta property="og:image:height" content="640">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="stylesheet" href="../common/style.css">
+    <title>nik</title>
     <style>
         html {
             height: 100%;
@@ -16,6 +19,10 @@
         body {
             background-image: url("./nik.gif");
             background-size: 100% 100%;
+        }
+        code {
+            color: white;
+            text-shadow: 1px 1px hotpink, 2px 2px 0 black;
         }
     </style>
 </head>
@@ -27,6 +34,10 @@
         async function AutoPlay(e) {
             await actx.resume();
             bgm.play();
+
+            const message = document.getElementById("message");
+            if (message)
+                message.textContent = "playing a thing...";
             window.removeEventListener("click", AutoPlay);
         }
 
@@ -35,5 +46,6 @@
             AutoPlay
         );
     </script>
+    <code class="nonselectable" id="message">click to start playing a thing...</code>
 </body>
 </html>
