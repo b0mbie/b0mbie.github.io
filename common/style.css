@@ -1,12 +1,7 @@
 /* Common style.css */
-/* Made for akabomb-prog.github.io */
+/* Made for b0mbie.github.io */
 
 .nonselectable {
-	top: 0;
-	left: 0;
-	position: absolute;
-	margin: 0px;
-	
 	user-drag: none; 
 	user-select: none;
 	-moz-user-select: none;
