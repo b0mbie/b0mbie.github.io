@@ -1,0 +1,85 @@
+html {
+	background-color: #ebebeb;
+}
+
+body {
+	margin: 2em auto;
+	padding: 3em;
+
+	line-height: 1.0;
+	text-align: justify;
+	max-width: 80em;
+	background-color: #ffffff;
+	color: #1f1f1f;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+	margin-bottom: 2em;
+}
+
+hr {
+	border: 1px solid #aaaaaa;
+	margin: 1em;
+}
+
+h1, h2, h3 {
+	margin: 0.5em 0 0.5em;
+}
+
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.25em;
+}
+
+p {
+	line-height: 1.25em;
+	margin: 0.25em 0 0.25em;
+}
+
+a {
+	text-decoration: none;
+	color: #1515cc;
+}
+
+a:link:hover, a:visited:hover {
+	background-color: #bdbdf2;
+	border: 2px solid #bdbdf2;
+	margin: -2px;
+	color: #090975;
+}
+
+a:link:active, a:visited:active {
+	color: #FF0000;
+}
+
+q {
+	font-style: italic;
+}
+
+ul {
+	margin: 0;
+}
+
+nav ul {
+	padding: 0;
+	display: inline;
+	list-style: none;
+}
+
+nav li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+nav li + li:before {
+	display: inline;
+	/* This needs a non-breaking space to appear properly. Also, the first space seems to be eaten. */
+	content: " \00b7\00a0";
+}
