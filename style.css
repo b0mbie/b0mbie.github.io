@@ -23,37 +23,44 @@ hr {
 	margin: 1em;
 }
 
-h1, h2, h3 {
-	margin: 0.5em 0 0.5em;
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.5rem 0 0.5rem;
 }
-
 h1 {
 	font-size: 3em;
 }
 h2 {
-	font-size: 2em;
+	font-size: 2.25em;
 }
 h3 {
+	font-size: 1.75em;
+}
+h4 {
+	font-size: 1.375em;
+}
+h5 {
 	font-size: 1.25em;
+}
+h6 {
+	font-size: 1.1em;
 }
 
 p {
-	line-height: 1.25em;
+	line-height: 1.25;
 	margin: 0.25em 0 0.25em;
 }
 
 a {
+	line-height: 1.2;
+	display: inline-block;
 	text-decoration: none;
 	color: #1515cc;
 }
-
 a:link:hover, a:visited:hover {
 	background-color: #bdbdf2;
-	border: 2px solid #bdbdf2;
-	margin: -2px;
+	outline: 1px solid #bdbdf2;
 	color: #090975;
 }
-
 a:link:active, a:visited:active {
 	color: #FF0000;
 }
@@ -66,7 +73,7 @@ ul {
 	margin: 0;
 }
 
-nav ul {
+nav menu {
 	padding: 0;
 	display: inline;
 	list-style: none;
@@ -82,4 +89,50 @@ nav li + li:before {
 	display: inline;
 	/* This needs a non-breaking space to appear properly. Also, the first space seems to be eaten. */
 	content: " \00b7\00a0";
+}
+
+kbd kbd {
+	display: inline-block;
+	border: 1px solid #1f1f1f;
+	background-color: #ebebeb;
+	line-height: 1;
+	padding: 0.3em 0.3em 0.4em;
+	white-space: nowrap;
+	font-weight: bold;
+	box-shadow: 0 -0.2em 0 0 #0000003f inset;
+}
+
+dl {
+	margin: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+details {
+	border: 1px solid #1f1f1f;
+	padding: 0.5em 0.5em 0;
+	margin: 0.25em 0 0.25em;
+}
+summary {
+	font-weight: bold;
+	margin: -0.5em -0.5em 0;
+	padding: 0.5em;
+}
+details[open] {
+	padding: 0.5em;
+}
+details[open] summary {
+	border-bottom: 1px solid #1f1f1f;
+}
+
+figure:has(> blockquote) {
+	background-color: #ebebeb;
+	padding: 1em;
+	border-left: 0.1em solid #1f1f1f;
+	margin: 0.25em 0 0.25em;
+}
+blockquote {
+	margin: 0;
 }
